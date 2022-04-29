@@ -16,7 +16,7 @@ export function Banner() {
                     </div>
                     <p>Para terminar o dia, não pode faltar nosso delivery! Você não precisa mais sair de casa para saborear nossas delícias. Agora, entregamos tudo com rapidez e agilidade! A fome bateu?</p>
                     <div className="d-flex gap-3">
-                        <Link href="/">
+                        <Link href="/restaurantes">
                             <a className={styles.btn_primary}>Peça agora</a>
                         </Link>
                         <Link href="/">

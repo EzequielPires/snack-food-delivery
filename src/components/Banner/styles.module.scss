@@ -38,6 +38,9 @@
     font-weight: 600;
     background: var(--main);
     border-radius: 6px;
+    &:hover {
+        color: #fff;
+    }
 }
 .btn_secondary {
     background: transparent;
