@@ -2,10 +2,10 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation } from 'swiper';
 import styles from './styles.module.scss';
 
-export function SwiperBestRestaurants() {
+export function SwiperBestRestaurants({title}) {
     return (
         <div className={styles.container + ' container best-restaurants'}>
-                <h3>Os melhores restaurantes</h3>
+                <h3>Famosos no <span style={{color: 'var(--main)', fontWeight: '700'}}>Snack</span><span style={{color: 'var(--secondary)', fontWeight: '700'}}>Delivery</span></h3>
                 <Swiper
                     id={styles.swiper}
                     modules={[Navigation]}
