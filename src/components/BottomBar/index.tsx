@@ -4,7 +4,10 @@ export function BottomBar() {
     return (
         <div className={styles.bottom_bar}>
             <nav className={styles.navtop}>
-                <FaShoppingBag />
+                <div className={styles.items}>
+                    <FaShoppingBag />
+                    <span>10</span>
+                </div>
                 <button>Ver sacola</button>
                 <span>R$ 23,49</span>
             </nav>
