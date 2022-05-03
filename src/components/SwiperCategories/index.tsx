@@ -8,7 +8,7 @@ export function SwiperCategories() {
         <Swiper
             id={styles.swiper}
             modules={[Navigation]}
-            spaceBetween={32}
+            spaceBetween={0}
             slidesPerView="auto"
             navigation
         >
