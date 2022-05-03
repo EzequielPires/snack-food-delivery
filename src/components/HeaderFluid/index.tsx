@@ -11,7 +11,7 @@ export function HeaderFluid() {
                 <div className="container-fluid d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                         <Link href="/">
-                            <a>
+                            <a className={styles.logo}>
                                 <img src={Logo.src} alt="" />
                             </a>
                         </Link>
@@ -59,7 +59,8 @@ export function HeaderFluid() {
                         </div>
                     </div>
                     <button className={styles.button_collapse + ' d-md-none'}>
-                        <img src={MenuSvg.src} alt="" />
+                        R. José Saturnino de Castro, 30
+                        <FaChevronDown />
                     </button>
                 </div>
             </nav>

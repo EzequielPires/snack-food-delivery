@@ -92,7 +92,23 @@
     background: transparent;
 }
 @media (max-width: 720px) {
-    .navbar {
+    .navbar, .header {
         position: relative;
+        height: 80px;
+    }
+    .button_collapse {
+        display: flex;
+        align-items: center;
+        font-size: .875rem;
+        color: #fff;
+        svg {
+            margin-left: .25rem;
+        }
+    }
+    .logo {
+        height: 32px !important;
+        img {
+            height: 100% !important;
+        }
     }
 }
