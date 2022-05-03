@@ -1,6 +1,7 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation } from 'swiper';
 import styles from './styles.module.scss';
+import { FaStar } from 'react-icons/fa';
 
 export function SwiperBestRestaurants({title}) {
     return (
@@ -21,6 +22,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -30,6 +32,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -39,6 +42,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -48,6 +52,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -57,6 +62,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -66,6 +72,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -75,6 +82,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                     <SwiperSlide className={styles.card}>
                         <div className={styles.avatar}>
@@ -84,6 +92,7 @@ export function SwiperBestRestaurants({title}) {
                             <h4>Name</h4>
                             <span>Category</span>
                         </div>
+                        <FaStar />
                     </SwiperSlide>
                 </Swiper>
         </div>
