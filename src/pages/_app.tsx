@@ -8,7 +8,7 @@ import { BottomBar } from '../components/BottomBar';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className='pb-5 pb-md-0'>
       <Component {...pageProps} />
       <BottomBar />
     </div>
