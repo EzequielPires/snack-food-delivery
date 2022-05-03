@@ -92,5 +92,7 @@
     background: transparent;
 }
 @media (max-width: 720px) {
-
+    .navbar {
+        position: relative;
+    }
 }
