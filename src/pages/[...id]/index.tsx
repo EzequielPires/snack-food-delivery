@@ -22,22 +22,24 @@ export default function RestaurantView() {
                     </div>
                 </div>
                 <div className={styles.header + " d-flex align-items-center justify-content-between mt-4"}>
-                    <div className="d-flex align-items-center gap-4">
-                        <div className={styles.logo}>
+                    <div className={styles.logo}>
 
-                        </div>
-                        <h4 className={styles.title}>Sanduíche do Silvio</h4>
-                        <div className="d-flex align-items-center">
-                            <FaStar />
-                            <span>4,6</span>
-                        </div>
                     </div>
-                    <div className="d-flex align-items-center">
-                        <a href="">Ver mais</a>
-                        <span>Pedido mínimo R$ 16,00</span>
+                    <div className="d-flex flex-column w-100">
+                        <div className="d-flex align-items-center justify-content-between gap-md-4">
+                            <h4 className={styles.title}>Sanduíche do Silvio</h4>
+                            <div className="d-flex align-items-center">
+                                <FaStar />
+                                <span>4,6</span>
+                            </div>
+                        </div>
+                        <div className={styles.sub_header + " d-flex justify-content-between align-items-center"}>
+                            <a href="">Ver mais</a>
+                            <span>Pedido mínimo R$ 16,00</span>
+                        </div>
                     </div>
                 </div>
-                <div className={styles.form + " d-flex mt-4"}>
+                <div className={styles.form + " d-flex flex-wrap mt-4"}>
                     <div className={styles.input_box}>
                         <FaSearch />
                         <input type="text" placeholder='Busque no cardápio' />

@@ -6,3 +6,10 @@
         margin-bottom: 2rem;
     }
 }
+@media (max-width: 720px) {
+    .container {
+        h3 {
+            font-size: 1.5rem !important;
+        }
+    }
+}

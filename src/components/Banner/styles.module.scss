@@ -100,3 +100,72 @@
         color: #fff;
     }
 }
+@media (max-width: 720px) {
+    .banner {
+        padding: 48px 0;
+        overflow: hidden;
+        h2 {
+            color: #fff;
+            font-size: 2rem;
+            line-height: 100%;
+            font-weight: 700;
+        }
+        h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: var(--secondary);
+            font-size: 80px;
+            line-height: 70%;
+            font-weight: 700;
+        }
+        p {
+            color: #c3c3c3;
+            line-height: 150% !important;
+            max-width: 360px;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .btn_primary, .btn_secondary {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        background: var(--main);
+        border-radius: 6px;
+        z-index: 999;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .btn_secondary {
+        background: transparent;
+        border: 2px solid var(--secondary);
+        color: var(--secondary);
+    }
+    .content_image {
+        margin-top: 80px;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .input_box {
+        width: 100%;
+        flex-wrap: wrap;
+        input {
+            width: 100%;
+        }
+        button {
+            height: 48px;
+            width: 100%;
+        }
+    }
+}

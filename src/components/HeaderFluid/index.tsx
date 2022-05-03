@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Logo from '../../assets/logo.svg';
-import { FaChevronDown, FaSearch, FaShoppingBag, FaSign, FaSignInAlt } from 'react-icons/fa';
+import { FaChevronDown, FaSearch, FaShoppingBag, FaSignInAlt } from 'react-icons/fa';
+import MenuSvg from '../../assets/Icons/menu.svg'
 import styles from './styles.module.scss';
 
 export function HeaderFluid() {
@@ -14,32 +15,34 @@ export function HeaderFluid() {
                                 <img src={Logo.src} alt="" />
                             </a>
                         </Link>
-                        <Link href="/">
-                            <a className={styles.link_active}>
-                                Restaurantes
-                            </a>
-                        </Link>
-                        <Link href="/">
-                            <a>
-                                Mercados
-                            </a>
-                        </Link>
-                        <Link href="/">
-                            <a>
-                                Bebidas
-                            </a>
-                        </Link>
-                        <Link href="/">
-                            <a>
-                                Farmácias
-                            </a>
-                        </Link>
+                        <ul className="d-none d-md-flex align-items-center">
+                            <Link href="/">
+                                <a className={styles.link_active}>
+                                    Restaurantes
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a>
+                                    Mercados
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a>
+                                    Bebidas
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a>
+                                    Farmácias
+                                </a>
+                            </Link>
+                        </ul>
                     </div>
-                    <div className={styles.input_box}>
+                    <div className={styles.input_box + ' d-none d-md-flex'}>
                         <FaSearch />
                         <input type="text" placeholder='Busque por item ou loja' />
                     </div>
-                    <div className="d-flex align-items-center">
+                    <div className="d-none d-md-flex align-items-center">
                         <Link href="/">
                             <a className={styles.link_active}>
                                 R. José Saturnino de Castro, 30
@@ -55,6 +58,9 @@ export function HeaderFluid() {
                             </div>
                         </div>
                     </div>
+                    <button className={styles.button_collapse + ' d-md-none'}>
+                        <img src={MenuSvg.src} alt="" />
+                    </button>
                 </div>
             </nav>
         </header>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from '../../assets/logo.svg';
+import MenuSvg from '../../assets/Icons/menu.svg'
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -13,18 +14,20 @@ export function Header() {
                                 <img src={Logo.src} alt="" />
                             </a>
                         </Link>
-                        <Link href="/">
-                            <a className={styles.link_active}>
-                                Para clientes
-                            </a>
-                        </Link>
-                        <Link href="/">
-                            <a>
-                                Para restaurantes
-                            </a>
-                        </Link>
+                        <div className="d-none d-md-flex align-items-center">
+                            <Link href="/">
+                                <a className={styles.link_active}>
+                                    Para clientes
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a>
+                                    Para restaurantes
+                                </a>
+                            </Link>
+                        </div>
                     </div>
-                    <div className="d-flex align-items-center">
+                    <div className="d-none d-md-flex align-items-center">
                         <Link href="/">
                             <a className={styles.link_active}>
                                 Criar conta
@@ -34,6 +37,9 @@ export function Header() {
                             <a className={styles.btn}>Entrar</a>
                         </Link>
                     </div>
+                    <button className={styles.button_collapse + ' d-md-none'}>
+                        <img src={MenuSvg.src} alt="" />
+                    </button>
                 </div>
             </nav>
         </header>

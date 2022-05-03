@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 export function Banner() {
     return (
         <div className={styles.banner}>
-            <div className={styles.container + " container d-flex align-items-center justify-content-between"}>
+            <div className={styles.container + " container d-flex flex-wrap align-items-center justify-content-between"}>
                 <div className="d-flex flex-column">
                     <div className="d-flex align-items-center mb-4">
                         <h1>Snack</h1>
@@ -30,7 +30,7 @@ export function Banner() {
                     <img src={Mockup.src} alt="" />
                 </div>
             </div>
-            <div className={styles.container + " container d-flex flex-column align-items-center justify-content-center mt-5 pt-4"}>
+            <div className={styles.container + " container d-flex flex-column align-items-md-center justify-content-center mt-5 pt-4"}>
                 <h3>Tudo pra facilitar seu dia a dia</h3>
                 <p>O que você precisa está aqui. Peça e receba onde estiver.</p>
                 <div className={styles.input_box}>
