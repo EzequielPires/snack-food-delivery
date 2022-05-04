@@ -10,7 +10,7 @@ export function Header() {
                 <div className="container d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                         <Link href="/">
-                            <a className={styles.logo}>
+                            <a>
                                 <img src={Logo.src} alt="" />
                             </a>
                         </Link>

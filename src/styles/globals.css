@@ -18,19 +18,19 @@ a {
 * {
   box-sizing: border-box;
 }
-.best-restaurants .swiper .swiper-button-next, .best-restaurants .swiper .swiper-button-prev {
+.swiper .swiper-button-next, .swiper .swiper-button-prev {
     width: 48px;
     height: 48px;
     background: #333;
     border-radius: 50%;
 }
-.best-restaurants .swiper .swiper-button-next {
+.swiper .swiper-button-next {
   right: -48px;
 }
-.best-restaurants .swiper .swiper-button-prev {
+.swiper .swiper-button-prev {
   left: -48px;
 }
-.best-restaurants .swiper .swiper-button-next::after, .best-restaurants .swiper .swiper-button-prev::after {
+.swiper .swiper-button-next::after, .swiper .swiper-button-prev::after {
   color: var(--secondary);
   font-size: 24px;
 }

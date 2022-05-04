@@ -3,6 +3,7 @@ import Logo from '../../assets/logo.svg';
 import { FaChevronDown, FaSearch, FaShoppingBag, FaSignInAlt } from 'react-icons/fa';
 import MenuSvg from '../../assets/Icons/menu.svg'
 import styles from './styles.module.scss';
+import { Bag } from '../Bag';
 
 export function HeaderFluid() {
     return (
@@ -50,13 +51,7 @@ export function HeaderFluid() {
                             </a>
                         </Link>
                         <button className={styles.btn_sign}><FaSignInAlt /></button>
-                        <div className={styles.bag}>
-                            <FaShoppingBag />
-                            <div className='d-flex flex-column'>
-                                <span className={styles.price}>R$ 0,00</span>
-                                <span className={styles.items}>0 itens</span>
-                            </div>
-                        </div>
+                        <Bag />
                     </div>
                     <button className={styles.button_collapse + ' d-md-none'}>
                         R. José Saturnino de Castro, 30

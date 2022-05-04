@@ -7,10 +7,8 @@ export function SwiperCategories() {
     return (
         <Swiper
             id={styles.swiper}
-            modules={[Navigation]}
             spaceBetween={0}
             slidesPerView="auto"
-            navigation
         >
             {categories.map(item => (
                 <SwiperSlide key={item.id} className={styles.card}>

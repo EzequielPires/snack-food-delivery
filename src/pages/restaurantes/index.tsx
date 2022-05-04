@@ -11,7 +11,7 @@ export default function Restaurantes() {
     return (
         <div className={styles.container}>
             <HeaderFluid />
-            <div className="container pt-3 mb-5">
+            <div className="container pt-3 mb-5" style={{position: `relative`}}>
                 <div className={styles.filter + " d-flex gap-4"}>
                     <SwiperFilter />
                 </div>
