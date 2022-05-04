@@ -96,8 +96,9 @@ export function BottomBar() {
                                 <span>R$ 23,49</span>
                             </div>
                         </div>
+                        <button className={styles.btn_primary}>Escolher forma de pagamento</button>
                     </div>
-                    <button className={styles.btn_primary}>Escolher forma de pagamento</button>
+
                 </div>
             </nav>
         </div>
