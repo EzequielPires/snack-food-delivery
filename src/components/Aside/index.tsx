@@ -1,10 +1,11 @@
 import styles from './styles.module.scss';
 import Logo from '../../assets/logo.svg';
 import Link from 'next/link';
-import router from 'next/router';
 import { FaBook, FaDollarSign, FaHome, FaReceipt } from 'react-icons/fa';
+import {useRouter} from "next/router";
 
 export function Aside() {
+    const router = useRouter();
     return (
         <div className={styles.aside}>
             <div className={styles.logo}>

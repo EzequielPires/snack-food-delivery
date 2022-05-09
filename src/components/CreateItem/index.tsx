@@ -1,15 +1,56 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { FaChild, FaImage, FaPlus } from 'react-icons/fa';
 import { Input } from '../Input';
 import { Select } from '../Select';
 import { Textarea } from '../Textarea';
 import styles from './styles.module.scss';
+import {useSelect} from "../../hooks/useSelect";
+import axios from "axios";
+import {useForm} from "../../hooks/useForm";
 
-export function CreateItem() {
+export function CreateItem({menuId}) {
     const [active, setActive] = useState(1);
     const [check, setCheck] = useState(1);
     const [show, setShow] = useState(false);
+    const [image, setImage] = useState(null);
+    const category = useSelect();
+    const name = useForm();
+    const details = useForm();
+    const price = useForm();
     const handleShow = () => setShow(!show);
+
+    const handleCategories = async () => {
+        await axios.get('http://localhost:3000/menus/list').then(res => category.setOptions(res.data.data));
+    }
+
+    const onChangeUploadImage = (e) => {
+        setImage(e.target.files[0]);
+    }
+
+    useEffect(() => {
+        handleCategories();
+    }, [])
+
+    const handleSubmit = async () => {
+        await axios.post('http://localhost:3000/items/new', {
+            name: name.value,
+            details: details.value,
+            price: price.value,
+        }).then(async res => {
+            console.log(res.data.data);
+            await axios.put(`http://localhost:3000/menus/add-item/${category.value.code}`, {
+                item: res.data.data.id,
+            });
+            if(image) {
+                const data = new FormData();
+                data.append('file', image);
+                await axios.put(`http://localhost:3000/items/upload/image/${res.data.data.id}`, data);
+                handleCategories();
+            }
+
+        })
+    }
+
     return (
         <>
             <button className={styles.button} onClick={handleShow}>
@@ -40,22 +81,30 @@ export function CreateItem() {
                                 <Select
                                     label={'Categoria'}
                                     placeholder={'Selecione uma categoria'}
+                                    {...category}
                                 />
                                 <Input
                                     label={'Nome do prato'}
                                     placeholder={'Digite o nome do prato'}
+                                    {...name}
                                 />
                                 <Textarea
                                     label={'Descrição'}
                                     placeholder={'Digite a descrição do prato'}
+                                    {...details}
                                 />
                             </div>
                             <div className={styles.upload_image}>
                                 <span className={styles.title}>Imagem do item</span>
                                 <p>Aparece na listagem e no detalhe do prato</p>
                                 <div className={styles.area}>
-                                    <FaImage />
-                                    <button>Escolher imagem</button>
+                                    {image ? <img src={URL.createObjectURL(image)} alt="" /> : (
+                                        <>
+                                            <FaImage />
+                                            <input type={'file'} className={'d-none'} id={'input_file'} name={'input_file'} onChange={onChangeUploadImage}/>
+                                            <label htmlFor={'input_file'}>Escolher imagem</label>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -112,12 +161,13 @@ export function CreateItem() {
                             <div className={styles.input_unit}>
                                 <label htmlFor="">Preço</label>
                                 <div className="d-flex">
-                                    <input type="text" />
+                                    <input type="text" value={price.value} onChange={e => price.onChange(e.target.value)}/>
                                     <button>R$</button>
                                     <button className={styles.btn_desconto}>Aplicar desconto</button>
                                 </div>
                             </div>
                         </div>
+                        <button className={styles.btn_submit} onClick={handleSubmit}>Criar Item</button>
                     </div>
                 </div>
             }
