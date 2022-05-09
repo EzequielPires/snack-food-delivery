@@ -12,6 +12,9 @@
     border-bottom: 1px solid #333;
     background: #24252a77 !important;
     backdrop-filter: blur(24px);
+    ul {
+        margin: 0;
+    }
     a {
         display: flex;
         align-items: center;

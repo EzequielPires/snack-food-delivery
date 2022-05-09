@@ -9,6 +9,9 @@ body {
 :root {
   --main: #EC2734;
   --secondary: #FF7E00;
+  --gray: #24252A;
+  --gray-1: #3C3D45;
+  --gray-2: #656776;
 }
 a {
   color: inherit;

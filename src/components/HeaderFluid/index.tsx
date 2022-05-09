@@ -17,7 +17,7 @@ export function HeaderFluid() {
                             </a>
                         </Link>
                         <ul className="d-none d-md-flex align-items-center">
-                            <Link href="/">
+                            <Link href="/restaurantes">
                                 <a className={styles.link_active}>
                                     Restaurantes
                                 </a>
