@@ -2,20 +2,25 @@ import styles from './styles.module.scss';
 import Logo from '../../assets/logo.svg';
 import Link from 'next/link';
 import { FaBook, FaDollarSign, FaHome, FaReceipt } from 'react-icons/fa';
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 
 export function Aside() {
+    const {restaurant} = useContext(AuthContext);
     const router = useRouter();
     return (
         <div className={styles.aside}>
-            <div className={styles.logo}>
-                <img src={Logo.src} alt="Logo" />
-            </div>
+            <Link href='/'>
+                <a className={styles.logo}>
+                    <img src={Logo.src} alt="Logo" />
+                </a>
+            </Link>
             <div className={styles.store}>
                 <div className={styles.avatar}>
-
+                    {restaurant?.image && <img src={'http://localhost:3000/' + restaurant.image} alt="" />}
                 </div>
-                <h4>Inbrasa Burguer</h4>
+                <h4>{restaurant?.name}</h4>
                 <span>Loja Fechada</span>
             </div>
             <div className={styles.nav_links}>
@@ -44,7 +49,7 @@ export function Aside() {
                     </a>
                 </Link>
                 <Link href="/admin/cardapios">
-                    <a className={router.asPath === '/admin/cardapios1' && styles.active}>
+                    <a className={router.asPath === '/admin/cardapios' && styles.active}>
                         <div className={styles.icon}>
                             <FaBook />
                         </div>

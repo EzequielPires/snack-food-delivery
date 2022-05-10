@@ -28,12 +28,12 @@ export function Header() {
                         </div>
                     </div>
                     <div className="d-none d-md-flex align-items-center">
-                        <Link href="/">
+                        <Link href="/create">
                             <a className={styles.link_active}>
                                 Criar conta
                             </a>
                         </Link>
-                        <Link href="/">
+                        <Link href="/login">
                             <a className={styles.btn}>Entrar</a>
                         </Link>
                     </div>
